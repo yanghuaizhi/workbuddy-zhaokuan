@@ -1,0 +1,43 @@
+# 本仓库不放代码，只放项目管理与对齐材料
+# 以下规则防止敏感材料误入
+
+# 凭据与环境
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*
+secret*
+
+# 服务端代码（代码在独立仓库，不进本仓）
+mcp-zhaokuan/
+src/
+*.py
+!scripts/*.py
+
+# 上游接口内部契约（含内网地址与 file:line）
+接口事实底稿.md
+**/接口事实底稿.md
+
+# 实测原始产物
+*.jsonl
+probe-log*
+Demo/
+基础图片*/
+
+# 平台规范原件（版权材料，不外传）
+*.pdf
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# 构建与缓存
+node_modules/
+__pycache__/
+.pytest_cache/
+.venv/
